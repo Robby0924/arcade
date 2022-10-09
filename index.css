@@ -1,4 +1,101 @@
-h1{
-    color: pink;
-  }
- 
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+}
+
+
+#playerSelection {
+display: none;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+}
+
+#vsPlayer {
+display: none;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+}
+
+
+#vsComputer {
+display: none;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+}
+
+#gamePhase {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+}
+
+button {
+margin-top: 10px;
+}
+
+
+#gameStart {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+}
+
+#gamePhase {
+display: none;
+text-align: center;
+}
+
+body {
+font-family: Arial, Helvetica, sans-serif
+}
+
+
+
+.gameBoard {
+display: grid;
+grid-template-columns: repeat(3, auto);
+width: 306px;
+margin: 50px auto;
+}
+
+.box {
+width: 100px;
+height: 100px;
+box-shadow: 0 0 0 1px #333333;
+border: 1px solid #333333;
+cursor: pointer;
+
+line-height: 100px;
+font-size: 60px;
+}
+
+
+#computerMoveDisplay {
+display: none;
+font-style: italic;
+font-size: smaller;
+}
+
+#mainReturn {
+display: block;
+}
+
+#computerMove{
+display: none;
+color: black;
+background-color: lightpink;
+border: 1px solid black;
+padding: 10px;
+}
