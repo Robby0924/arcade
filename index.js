@@ -76,6 +76,7 @@ let activePlayer;
 
 //Takes player names from HTML and puts them in a variable for calling
 function determineStartPlayer(param) {
+  
   if (modeSelection === "vsPlayer") {
     playerNameOne = document.getElementById("playerNameOne").value;
     playerNameTwo = document.getElementById("playerNameTwo").value;
@@ -99,11 +100,14 @@ function determineStartPlayer(param) {
 
   //Displays the first player as the player's turn
   statusDisplay.innerText = `It's ${activePlayer}'s turn`;
+  document.getElementById("instructions").style.display="block"
 
   //If the modeSelection is vs comp and the first player is comp, prep start button
   if (modeSelection === "vsComputer" && playerOne === playerNameTwo) {
     computerMove.innerText = "Start!";
     computerMove.style.display = "block";
+    document.getElementById("instructions2").style.display = "block"
+    document.getElementById("instructions").style.display = "none"
   }
 
   //If first player is not comp, enables clicking of the game table
@@ -123,7 +127,6 @@ let gameRun = true;
 let boardArr = ["", "", "", "", "", "", "", "", ""];
 //Starts playerOne as X
 let playerSymbol = "X";
-
 //Declares any displays that should be showing
 let statusDisplay = document.getElementById("declareTurnWinDraw");
 let computerMoveDisplay = document.getElementById("computerMoveDisplay");
@@ -138,6 +141,7 @@ computerMove.addEventListener("click", computerInput);
 function computerInput() {
   //Turn on "Computing move..." display
   computerMoveDisplay.style.display = "block";
+  document.getElementById("instructions2").style.display = "none"
 
   //Turns off "Next" button
   computerMove.style.display = "none";
@@ -206,6 +210,7 @@ function clickFunc(boxClicked) {
   //Sets the selected box as the div that was targeted in HTML
   let selectedBox = boxClicked.target;
   let classes = selectedBox.getAttribute("class");
+  document.getElementById("instructions").style.display="none"
 
   //If the word "disabled" is not found in the classes variable, human can take a turn
   //-1 indicates that it was not found
@@ -347,6 +352,7 @@ function gameRestart() {
 document.getElementById("mainReturn").addEventListener("click", mainRestart);
 function mainRestart() {
   gamePhase.style.display = "none";
+  computerMove.style.display = "none";
   gameStart.style.display = "flex";
   gameRun = true;
   playerSymbol = "X";

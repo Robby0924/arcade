@@ -9,63 +9,67 @@
     <title>Tic Tac Toe</title>
   </head>
   <body>
-    <!--Game Start Screen-->
+    <div id="outerBorder">
+      <!--Game Start Screen-->
 
-    <div id="gameStart">
-      <h1>Tic Tac Toe</h1>
-      <button id="buttonStart">Start!</button>
-    </div>
-
-    <!--Player Selection Screen-->
-
-    <div id="playerSelection">
-      <h1>Player Select</h1>
-      <select id="vsSelect">
-        <option value="select">Select</option>
-        <option value="vsPlayer">vs. Player</option>
-        <option value="vsComputer">vs. Computer</option>
-      </select>
-      <button id="toVsButton">Continue</button>
-    </div>
-
-    <!--VS Player Screen-->
-
-    <div id="vsPlayer">
-      <h2>Player One Name</h2>
-      <input type="text" id="playerNameOne" />
-      <h2>Player Two Name</h2>
-      <input type="text" id="playerNameTwo" />
-      <button class="continueButton">Continue</button>
-      <button class="backButton">Back</button>
-    </div>
-
-    <!--VS Computer Screen-->
-    <div id="vsComputer">
-      <h2>Player Name</h2>
-      <input type="text" id="playerSolo" />
-      <button class="continueButton">Continue</button>
-      <button class="backButton">Back</button>
-    </div>
-
-    <!--Game Phase Screen-->
-    <div id="gamePhase">
-      <h1 id="title">Tic Tac Toe</h1>
-      <div class="gameBoard">
-        <div title="0" class="box disabled"></div>
-        <div title="1" class="box disabled"></div>
-        <div title="2" class="box disabled"></div>
-        <div title="3" class="box disabled"></div>
-        <div title="4" class="box disabled"></div>
-        <div title="5" class="box disabled"></div>
-        <div title="6" class="box disabled"></div>
-        <div title="7" class="box disabled"></div>
-        <div title="8" class="box disabled"></div>
+      <div id="gameStart">
+        <h1 class="title">Tic Tac Toe</h1>
+        <button id="buttonStart">Start!</button>
       </div>
-      <h2 id="declareTurnWinDraw"></h2>
-      <h2 id="computerMoveDisplay">"Computing move..."</h2>
-      <button id="computerMove">Next</button>
-      <button class="gameRestart">Restart</button>
-      <button id="mainReturn">Return to Main</button>
+
+      <!--Player Selection Screen-->
+
+      <div id="playerSelection">
+        <h1>Player Select</h1>
+        <select id="vsSelect">
+          <option value="select">Select</option>
+          <option value="vsPlayer">vs. Player</option>
+          <option value="vsComputer">vs. Computer</option>
+        </select>
+        <button id="toVsButton">Continue</button>
+      </div>
+
+      <!--VS Player Screen-->
+
+      <div id="vsPlayer">
+        <h2>Player One Name</h2>
+        <input type="text" id="playerNameOne" />
+        <h2>Player Two Name</h2>
+        <input type="text" id="playerNameTwo" />
+        <button class="continueButton">Continue</button>
+        <button class="backButton">Back</button>
+      </div>
+
+      <!--VS Computer Screen-->
+      <div id="vsComputer">
+        <h2>Player Name</h2>
+        <input type="text" id="playerSolo" />
+        <button class="continueButton">Continue</button>
+        <button class="backButton">Back</button>
+      </div>
+
+      <!--Game Phase Screen-->
+      <div id="gamePhase">
+        <h1 class="title">Tic Tac Toe</h1>
+        <div class="gameBoard">
+          <div title="0" class="box disabled"></div>
+          <div title="1" class="box disabled"></div>
+          <div title="2" class="box disabled"></div>
+          <div title="3" class="box disabled"></div>
+          <div title="4" class="box disabled"></div>
+          <div title="5" class="box disabled"></div>
+          <div title="6" class="box disabled"></div>
+          <div title="7" class="box disabled"></div>
+          <div title="8" class="box disabled"></div>
+        </div>
+        <h3 id="instructions">Click anywhere on the board!</h3>
+        <h3 id="instructions2">Computer starts first. Click start!"</h3>
+        <h2 id="declareTurnWinDraw"></h2>
+        <h2 id="computerMoveDisplay">"Computing move..."</h2>
+        <button id="computerMove">Next</button>
+        <button class="gameRestart">Restart</button>
+        <button id="mainReturn">Return to Main</button>
+      </div>
     </div>
   </body>
 </html>
